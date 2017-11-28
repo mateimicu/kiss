@@ -11,13 +11,21 @@
             <a class="level-item" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}' target='_blank' rel='noopener'>
             <span class="icon">
               <i class>
-                {{- partial "svg/icons" $platform -}}                
+                {{- partial "svg/icons" $platform -}}
               </i>
             </span>
           </a>
           {{- end -}}
           {{- end -}}
         </nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      <div class="nav-left">
+        {{ range .Site.Sections }}
+            <a class="nav-item" href="{{ .Permalink }}"><h6 class="title is-6">{{ .Type }}</h6></a>
+        {{ end }}
       </div>
     </nav>
   </div>
