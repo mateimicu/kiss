@@ -74,6 +74,7 @@ tag ="tags"
 
 [blackfriday]
 hrefTargetBlank = true
+
 ```
 
 To change color of titles, add in static/css/custom.css
@@ -93,6 +94,18 @@ To align images, add #c for center, #r/l for right/left.
 
 ```md
 ![](/img/1/image.jpg#c)
+```
+
+## Add sections
+You can add new links in the navbar (under the blog name and social links)
+
+```toml
+[params.sections_right]
+"/page" = "Link to Page"
+"http://example.com" = "Link to Example"
+
+[params.sections_right]
+"https://gohugo.io" = "Hugo"
 ```
 
 ## Related Articles
